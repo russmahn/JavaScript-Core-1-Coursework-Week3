@@ -21,4 +21,11 @@ var pairs = pairsByIndex.map(function (indexes) {
   return [student, mentor];
 });
 
+function searchNull(num) {
+  return num === null
+}
+
+if (pairsByIndex.some(searchNull)) {
+  return process.exit(1)
+}
 console.log(pairs);
